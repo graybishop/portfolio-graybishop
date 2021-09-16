@@ -89,6 +89,7 @@ nav ul li {
 .banner p{
     color: whitesmoke;
     font-size: large;
+    text-align: right;
 }
 
 /* Main Styling */
