@@ -17,6 +17,7 @@ h1{
 
 h2{
     font-size: x-large;
+    text-align: right;
 }
 
 
@@ -102,14 +103,43 @@ main{
 
 .about-me, .work, .contact{
     display: grid;
-    grid-template-columns: 15em 1fr 1fr 1fr;
+    grid-template-columns: 15em 3fr;
     padding: 10px;
+    margin: 30px;
+    gap: 1em;
+}
+
+@media screen and (max-width:1000px){
+    .about-me, .work, .contact{
+        grid-template-columns: 1fr;
+    }
+
+    h2{
+        text-align: left;
+    }
 }
 
 /* About me styles*/
 
-.about-me p{
-    grid-column: 2/5;
+/* Work Styles */
+.work-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 250px);
+    gap: 1em;
+}
+
+.main-project{
+    grid-column: span 2;
+}
+
+.contact ul{
+    display: flex;
+    
+}
+
+.contact ul li{
+    margin: 20px;
 }
 
 /* .about-me{
