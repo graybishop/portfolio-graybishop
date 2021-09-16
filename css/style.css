@@ -30,6 +30,17 @@ nav ul li {
     font-weight: bold;
 }
 
+@media screen and (max-width:1000px){
+    header{
+        flex-flow: column;
+    }
+    
+    nav{
+        align-self: auto;
+    }
+}
+
+
 /* Profile name and picture styles */
 .profile{
     display: flex;
@@ -93,13 +104,13 @@ main{
     text-align: right;
     border-right: darkblue solid 1px;
     min-width: 150px;
+    width: 20%;
     box-sizing: border-box;
-    flex-grow: 1;
 }
 
 .about-me p{
     margin: 10px;
-    flex-shrink: 1;
+    flex: 1 1 0;
 
 }
 
@@ -110,22 +121,30 @@ main{
     padding: 10px;
     margin: 10px 30px;
     align-items: center;
-    min-width: 150px;
-    justify-content: space-around;
-    align-items: center;
     flex-flow: row wrap;
 }
 
 .work h2{
     text-align: right;
     border-right: darkblue solid 1px;
-    width: 150px;
+    min-width: 150px;
+    width: 20%;
     box-sizing: border-box;
     float: left;
+    align-self: center;
+}
+
+.work-grid{
+    min-width: 500px;
+    margin: 10px;
+    flex: 1 1 0;
+    flex-flow: row wrap;
+    display: flex;
 }
 
 .work article{
     background-color: darkcyan;
+    width: 10%;
     min-width: 300px;
     min-height: 300px;
 }
