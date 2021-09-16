@@ -27,7 +27,7 @@ nav{
 
 nav ul{
     list-style: none;
-    display: inline-flex;
+    display: flex;
 }
 
 nav ul li {
@@ -92,12 +92,25 @@ nav ul li {
 
 /* Main Styling */
 
+
+
+
 main{
+    display: flex;
+    flex-flow: column;
+}
+
+.about-me, .work, .contact{
     display: grid;
-    grid-template-columns: 12em 1fr 1fr 1fr;
+    grid-template-columns: 15em 1fr 1fr 1fr;
+    padding: 10px;
 }
 
 /* About me styles*/
+
+.about-me p{
+    grid-column: 2/5;
+}
 
 /* .about-me{
     display: flex;
@@ -118,7 +131,7 @@ main{
     margin: 10px;
     flex: 1 1 0; */
 
-/* }git */
+
 
 /* Work Styles */
 
@@ -150,7 +163,5 @@ main{
 
 .work article{
     background-color: darkcyan;
-    width: 10%;
-    min-width: 300px;
-    min-height: 300px;
+
 }
