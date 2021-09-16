@@ -1,16 +1,22 @@
-*{
-    padding: 0;
-    margin: 0;
+/* Header Style */
+body{
     font-family: sans-serif;
 }
 
-/* Header Style */
 header{
     display: flex;
     justify-content: space-between; 
     align-items: center;
     background-color: gray;
     width: 100%;
+}
+
+h1{
+    font-size: xx-large;
+}
+
+h2{
+    font-size: x-large;
 }
 
 
@@ -87,13 +93,13 @@ nav ul li {
 /* Main Styling */
 
 main{
-    display: flex;
-    flex-flow: column nowrap;
+    display: grid;
+    grid-template-columns: 12em 1fr 1fr 1fr;
 }
 
 /* About me styles*/
 
-.about-me{
+/* .about-me{
     display: flex;
     padding: 10px;
     margin: 10px 30px;
@@ -110,21 +116,21 @@ main{
 
 .about-me p{
     margin: 10px;
-    flex: 1 1 0;
+    flex: 1 1 0; */
 
-}
+/* }git */
 
 /* Work Styles */
 
-.work{
+/* .work{
     display: flex;
     padding: 10px;
     margin: 10px 30px;
     align-items: center;
     flex-flow: row wrap;
-}
+} */
 
-.work h2{
+/* .work h2{
     text-align: right;
     border-right: darkblue solid 1px;
     min-width: 150px;
@@ -132,15 +138,15 @@ main{
     box-sizing: border-box;
     float: left;
     align-self: center;
-}
+} */
 
-.work-grid{
+/* .work-grid{
     min-width: 500px;
     margin: 10px;
     flex: 1 1 0;
     flex-flow: row wrap;
     display: flex;
-}
+} */
 
 .work article{
     background-color: darkcyan;
