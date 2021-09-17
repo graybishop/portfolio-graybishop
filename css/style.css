@@ -5,14 +5,17 @@
     --bg-dark: #31343d;
     --bgcolor-1: #31343d;
     --accent: darkblue;
-    --border-radius: 2px;
     --shadow-color: white;
     --gradient-1: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
     --gradient-2: linear-gradient(45deg, #0700b8 0%, #00ff88 100%);
     
+    /* usable colors */
     --nav-font-color: #92ccce;
     --header-bg-color: #31343d;
     --gradient-3: linear-gradient(45deg, #92ccce, #92ccce);
+    --border-radius: 2px;
+    --secondary-blue: #445877;
+    --main-bg-color: #eeeef7;
 
 }
 
@@ -44,18 +47,41 @@ h1{
 h2{
     font-size: x-large;
     text-align: right;
-    color: white;
+    color: var(--secondary-blue);
+    border-right: 1px solid var(--secondary-blue);
+    padding: 15px;
 }
 
+/* Profile name and picture styles */
+/* .profile{
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 10px;
+    min-width: 350px;
+} */
+
+.profile-name{
+    order: 2;
+    /* position: absolute; */
+    /* bottom: 10px; */
+    /* change background color to neat gradient */
+    background: var(--gradient-3);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 5vw;
+    margin: 15px 0px;
+    font-weight: bolder;
+}
 
 /* Nav styles */
-nav{
-    align-self: flex-end;
-}
 
 nav ul{
     list-style: none;
     display: flex;
+    margin: 0 20px;
     
 }
 
@@ -90,6 +116,9 @@ nav ul li a:hover{
     
 }
 
+
+
+
 @media screen and (max-width:1000px){
     header{
         flex-flow: column;
@@ -98,28 +127,10 @@ nav ul li a:hover{
     nav{
         align-self: auto;
     }
-}
 
-
-/* Profile name and picture styles */
-/* .profile{
-    display: flex;
-    position: relative;
-    flex-flow: column nowrap;
-    align-items: center;
-    margin: 10px;
-    min-width: 350px;
-} */
-
-.profile-name{
-    order: 2;
-    /* position: absolute; */
-    /* bottom: 10px; */
-    /* change background color to neat gradient */
-    background: var(--gradient-3);
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    box-sizing: border-box;
-    padding: 5px;
+    .profile-name{
+        padding: 10px;
+    }
 }
 
 /* .placeholder-head-shot{
@@ -132,17 +143,24 @@ nav ul li a:hover{
 
 /* Banner styles */
 .banner{
-    background-color: darkblue;
-    min-height: 80px;
+    background:center/contain no-repeat url('../images/pexels-anni-roenkae-3169299.jpg');
+    background-size: 100%;
+    min-height: 300px;
     display: flex;
     justify-content: end;
     align-items: flex-end;
+
 }
 
 .banner p{
-    color: whitesmoke;
-    font-size: large;
+    color: var(--header-bg-color);
+    background: var(--nav-font-color);
+    font-size: larger;
     text-align: right;
+    margin: 10px 20px;
+    font-weight: bold;
+    padding: .5em;
+    border-radius: var(--border-radius);
 }
 
 /* Main Styling */
@@ -153,7 +171,7 @@ nav ul li a:hover{
 main{
     display: flex;
     flex-flow: column;
-    background: linear-gradient(45deg, #0700b8 0%, #00ff88 100%);
+    background: var(--main-bg-color);
     z-index: 1;
     position: relative;;
 }
@@ -167,15 +185,6 @@ main{
     
 }
 
-@media screen and (max-width:1000px){
-    .about-me, .work, .contact{
-        grid-template-columns: 1fr;
-    }
-
-    h2{
-        text-align: left;
-    }
-}
 
 /* About me styles*/
 
@@ -193,15 +202,24 @@ main{
     overflow: hidden;
     position: relative;
     border-radius: 10px;
-
+    
 }
 
 .work article:hover{
     opacity: .5;
     box-shadow: 5px 10px 0px 0px white;
-
+    
 }
 
+@media screen and (max-width:1000px){
+    .about-me, .work, .contact{
+        grid-template-columns: 1fr;
+    }
+
+    h2{
+        text-align: left;
+    }
+}
 
 
 .work article img{
