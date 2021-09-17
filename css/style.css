@@ -16,6 +16,7 @@
     --border-radius: 2px;
     --secondary-blue: #445877;
     --main-bg-color: #eeeef7;
+    --margin-from-header: 20px;
 
 }
 
@@ -175,11 +176,8 @@ main{
 
 .about-me, .work, .contact{
     display: flex;
-
     padding: 10px;
     margin: 15px 5vw;
-
-    
 }
 
 .section-header{
@@ -191,9 +189,13 @@ main{
 
 /* About me styles*/
 
+.about-me div{
+    margin-left: var(--margin-from-header);
+}
+
 .about-me p{
     color: var(--secondary-blue);
-    margin: 0 25px 25px 25px;
+    margin: 0 25px 25px 0px;
 }
 
 /* Work Styles */
@@ -203,7 +205,7 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 250px);
     gap: 1em;
-    margin: 0 20px;
+    margin-left: var(--margin-from-header);
 }
 
 .work article{
@@ -265,6 +267,7 @@ main{
     flex-flow: row wrap;
     justify-content: space-between;
     flex-grow: 1;
+    margin-left: var(--margin-from-header);
     
 }
 
@@ -282,7 +285,7 @@ main{
 
 @media screen and (max-width:1000px){
     .about-me, .work, .contact{
-        grid-template-columns: 1fr;
+        flex-flow: column wrap;
     }
     
     h2{
