@@ -1,6 +1,7 @@
 /* Header Style */
 body{
     font-family: sans-serif;
+    position: relative;
 }
 
 header{
@@ -13,11 +14,13 @@ header{
 
 h1{
     font-size: xx-large;
+    color: white;
 }
 
 h2{
     font-size: x-large;
     text-align: right;
+    color: white;
 }
 
 
@@ -35,6 +38,13 @@ nav ul li {
     margin: 20px;
     font-size: larger;
     font-weight: bold;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    
 }
 
 @media screen and (max-width:1000px){
@@ -74,7 +84,7 @@ nav ul li {
     border-radius: 10px;
     width: 300px;
     height: 300px;
-    background-color: rgb(63, 30, 210);
+    background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
 }
 
 /* Banner styles */
@@ -100,13 +110,16 @@ nav ul li {
 main{
     display: flex;
     flex-flow: column;
+    background: linear-gradient(45deg, #0700b8 0%, #00ff88 100%);
+    z-index: 1;
+    position: relative;;
 }
 
 .about-me, .work, .contact{
     display: grid;
-    grid-template-columns: 15em 3fr;
+    grid-template-columns: 10em 3fr;
     padding: 10px;
-    margin: 30px;
+    margin: 15px 5vw;
     gap: 1em;
 }
 
@@ -130,6 +143,41 @@ main{
     gap: 1em;
 }
 
+.work article{
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+.work article:hover{
+    opacity: .5;
+    box-shadow: 5-px 10px 1px 0px white;
+
+}
+
+
+
+.work article img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+
+}
+
+.work article h3, .work article p{
+    color: white;
+    background: linear-gradient(45deg, #3c548d 0%, #182848 100%);;
+    padding: 10px;
+    margin: 20px;
+}
+
+.work article h3{
+    font-weight: bolder;
+}
+
 .main-project{
     grid-column: span 2;
 }
@@ -143,56 +191,4 @@ main{
     margin: 20px;
 }
 
-/* .about-me{
-    display: flex;
-    padding: 10px;
-    margin: 10px 30px;
-    align-items: center;
-}
 
-.about-me h2{
-    text-align: right;
-    border-right: darkblue solid 1px;
-    min-width: 150px;
-    width: 20%;
-    box-sizing: border-box;
-}
-
-.about-me p{
-    margin: 10px;
-    flex: 1 1 0; */
-
-
-
-/* Work Styles */
-
-/* .work{
-    display: flex;
-    padding: 10px;
-    margin: 10px 30px;
-    align-items: center;
-    flex-flow: row wrap;
-} */
-
-/* .work h2{
-    text-align: right;
-    border-right: darkblue solid 1px;
-    min-width: 150px;
-    width: 20%;
-    box-sizing: border-box;
-    float: left;
-    align-self: center;
-} */
-
-/* .work-grid{
-    min-width: 500px;
-    margin: 10px;
-    flex: 1 1 0;
-    flex-flow: row wrap;
-    display: flex;
-} */
-
-.work article{
-    background-color: darkcyan;
-
-}
