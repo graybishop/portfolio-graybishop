@@ -246,6 +246,7 @@ main{
 .contact ul{
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
     
 }
 
