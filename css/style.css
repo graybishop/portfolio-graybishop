@@ -120,19 +120,6 @@ nav ul li a:hover{
 
 
 
-@media screen and (max-width:1000px){
-    header{
-        flex-flow: column;
-    }
-    
-    nav{
-        align-self: auto;
-    }
-
-    .profile-name{
-        padding: 10px;
-    }
-}
 
 /* .placeholder-head-shot{
     box-sizing: border-box;
@@ -150,7 +137,7 @@ nav ul li a:hover{
     display: flex;
     justify-content: end;
     align-items: flex-end;
-
+    
 }
 
 .banner p{
@@ -219,22 +206,13 @@ main{
     
 }
 
-@media screen and (max-width:1000px){
-    .about-me, .work, .contact{
-        grid-template-columns: 1fr;
-    }
-
-    h2{
-        text-align: left;
-    }
-}
 
 
 .work article img{
     position: absolute;
     z-index: -1;
     width: 100%;
-
+    
 }
 
 .work article h3, .work article p{
@@ -267,16 +245,47 @@ main{
 
 .contact ul{
     display: flex;
+    flex-flow: row wrap;
     
 }
 
 .contact ul li{
     margin: 20px;
-    color: white;
 }
 
-li a{
-    color: white;
+.contact ul li a{
+    color: var(--secondary-blue);
+    text-decoration: none;
+    border-bottom: 3px solid var(--secondary-blue);
+    padding: 10px;
 }
 
+
+@media screen and (max-width:1000px){
+    .about-me, .work, .contact{
+        grid-template-columns: 1fr;
+    }
+    
+    h2{
+        text-align: left;
+        border-right: 3px none var(--secondary-blue);
+        border-bottom: 3px solid var(--secondary-blue);
+    }
+    header{
+        flex-flow: column;
+    }
+    
+    nav{
+        align-self: auto;
+    }
+
+    .profile-name{
+        padding: 10px;
+    }
+
+    .contact ul{
+        flex-flow: column wrap;
+        
+    }
+}
 
