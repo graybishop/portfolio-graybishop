@@ -164,13 +164,28 @@ main{
     position: relative;;
 }
 
-.about-me, .work, .contact{
+/* .about-me, .work, .contact{
     display: grid;
     grid-template-columns: 10em 3fr;
     padding: 10px;
     margin: 15px 5vw;
     gap: 1em;
     
+} */
+
+.about-me, .work, .contact{
+    display: flex;
+
+    padding: 10px;
+    margin: 15px 5vw;
+
+    
+}
+
+.section-header{
+    outline: 1px solid;
+    width: 10em;
+    flex: 0 0 10em;
 }
 
 
@@ -183,10 +198,12 @@ main{
 
 /* Work Styles */
 .work-grid{
+    flex-grow: 1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 250px);
     gap: 1em;
+    margin: 0 20px;
 }
 
 .work article{
@@ -247,6 +264,7 @@ main{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    flex-grow: 1;
     
 }
 
