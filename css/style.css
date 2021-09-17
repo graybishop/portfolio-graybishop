@@ -133,7 +133,7 @@ nav ul li a:hover{
 /* Banner styles */
 .banner{
     background:center/contain no-repeat url('../images/pexels-anni-roenkae-3169299.jpg');
-    background-size: 100%;
+    background-size: cover;
     min-height: 300px;
     display: flex;
     justify-content: end;
