@@ -1,4 +1,27 @@
 /* Header Style */
+:root{
+    --font-headings: white;
+    --font-body: white;
+    --bg-dark: #31343d;
+    --bgcolor-1: #31343d;
+    --accent: darkblue;
+    --border-radius: 2px;
+    --shadow-color: white;
+    --gradient-1: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+    --gradient-2: linear-gradient(45deg, #0700b8 0%, #00ff88 100%);
+    
+    --nav-font-color: #92ccce;
+    --header-bg-color: #31343d;
+    --gradient-3: linear-gradient(45deg, #92ccce, #92ccce);
+
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
 body{
     font-family: sans-serif;
     position: relative;
@@ -8,13 +31,14 @@ header{
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    background-color: gray;
+    background-color: var(--header-bg-color);
     width: 100%;
+    transition: all .25s ease-in;
 }
 
 h1{
     font-size: xx-large;
-    color: white;
+    color: var(--header-bg-color);
 }
 
 h2{
@@ -34,16 +58,28 @@ nav ul{
     display: flex;
 }
 
+/* transition here */
 nav ul li {
-    margin: 20px;
+    margin: 5px;
     font-size: larger;
     font-weight: bold;
-    
+    background: var(--gradient-3);
+    /* background:rgb(241, 72, 5); */
+    padding: 10px;
+    border-radius: var(--border-radius);
+    background-repeat: no-repeat;
+    background-size: 100% .2em;
+    background-position: bottom;
+    transition: all .25s ease-in;
+}
+
+nav ul li:hover{
+    background-size: 100% 100%;
 }
 
 nav ul li a{
     text-decoration: none;
-    color: white;
+    color: var(--font-body);
     
 }
 
@@ -73,7 +109,7 @@ nav ul li a{
     position: absolute;
     bottom: 10px;
     /* change background color to neat gradient */
-    background-color: rgb(54, 54, 54);
+    background: var(--gradient-3);
     border-radius: 2px;
     box-sizing: border-box;
     padding: 5px;
@@ -121,6 +157,7 @@ main{
     padding: 10px;
     margin: 15px 5vw;
     gap: 1em;
+    
 }
 
 @media screen and (max-width:1000px){
@@ -154,7 +191,7 @@ main{
 
 .work article:hover{
     opacity: .5;
-    box-shadow: 5-px 10px 1px 0px white;
+    box-shadow: 5px 10px 0px 0px white;
 
 }
 
@@ -175,7 +212,7 @@ main{
 }
 
 .work article div{
-    background: linear-gradient(45deg, #3c548d 0%, #182848 100%);;
+    background: linear-gradient(45deg, #3c548d 0%, #182848 100%);
     width: 10em;
     position: absolute;
     left: 0;
@@ -198,6 +235,11 @@ main{
 
 .contact ul li{
     margin: 20px;
+    color: white;
+}
+
+li a{
+    color: white;
 }
 
 
