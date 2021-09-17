@@ -56,6 +56,7 @@ nav{
 nav ul{
     list-style: none;
     display: flex;
+    
 }
 
 /* transition here */
@@ -75,11 +76,17 @@ nav ul li {
 
 nav ul li:hover{
     background-size: 100% 100%;
+    color: var(--header-bg-color);
 }
 
 nav ul li a{
     text-decoration: none;
-    color: var(--font-body);
+    color: var(--nav-font-color);
+    transition: all .25s ease-in;
+}
+
+nav ul li a:hover{
+    color: var(--header-bg-color);
     
 }
 
@@ -95,33 +102,33 @@ nav ul li a{
 
 
 /* Profile name and picture styles */
-.profile{
+/* .profile{
     display: flex;
     position: relative;
     flex-flow: column nowrap;
     align-items: center;
     margin: 10px;
     min-width: 350px;
-}
+} */
 
 .profile-name{
     order: 2;
-    position: absolute;
-    bottom: 10px;
+    /* position: absolute; */
+    /* bottom: 10px; */
     /* change background color to neat gradient */
     background: var(--gradient-3);
-    border-radius: 2px;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
     box-sizing: border-box;
     padding: 5px;
 }
 
-.placeholder-head-shot{
+/* .placeholder-head-shot{
     box-sizing: border-box;
     border-radius: 10px;
     width: 300px;
     height: 300px;
     background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
-}
+} */
 
 /* Banner styles */
 .banner{
