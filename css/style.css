@@ -35,13 +35,14 @@ header{
 .profile-name{
     background: var(--gradient-3);
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    box-sizing: border-box;
-    padding: 10px;
+    display: inline-block;
+    padding: 1.5vw;
     padding-left: 5vw;
     margin: 15px 0px;
     font-weight: bolder;
     font-size: 2.5rem;
     color: var(--header-bg-color);
+    width: fit-content;
 }
 
 /* Nav styles */
@@ -78,7 +79,7 @@ nav ul li a{
     text-decoration: none;
     color: var(--nav-font-color);
     transition: all .25s ease-in;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 
 nav ul li a:hover{
@@ -246,7 +247,7 @@ h2{
 }
 
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:900px){
     .about-me, .work, .contact{
         flex-flow: column wrap;
     }
@@ -322,6 +323,7 @@ h2{
 
     nav ul li{
         width: 40%;
+        text-align: center;
     }
 }
 
