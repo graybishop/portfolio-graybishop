@@ -47,8 +47,9 @@ header{
 
 /* Nav styles */
 
-nav ul{
-    list-style: none;
+
+nav{
+    /* list-style: none; */
     display: flex;
     margin: 0 20px;
     flex-flow: row wrap;
@@ -56,7 +57,7 @@ nav ul{
     
 }
 
-nav ul li {
+nav a {
     margin: 5px;
     font-size: larger;
     font-weight: bold;
@@ -68,25 +69,16 @@ nav ul li {
     background-size: 100% .2em;
     background-position: bottom;
     transition: all .25s ease-in;
-}
-
-nav ul li:hover{
-    background-size: 100% 100%;
-    color: var(--header-bg-color);
-}
-
-nav ul li a{
     text-decoration: none;
     color: var(--nav-font-color);
     transition: all .25s ease-in;
     font-size: 1.2rem;
 }
 
-nav ul li a:hover{
+nav a:hover{
+    background-size: 100% 100%;
     color: var(--header-bg-color);
-    
 }
-
 
 
 /* Banner styles */
@@ -135,7 +127,7 @@ main{
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: right;
     color: var(--secondary-blue);
     border-right: 3px solid var(--secondary-blue);
@@ -277,7 +269,7 @@ h2{
         flex-flow: column;
     }
     
-    nav ul{
+    nav{
         margin: 0;
     }
 
@@ -313,7 +305,7 @@ h2{
 }
 
 @media screen and (max-width:500px){
-    nav ul{
+    nav{
         flex-flow: row wrap;
     }
 
@@ -321,7 +313,7 @@ h2{
         width: 100%;
     }
 
-    nav ul li{
+    nav a{
         width: 40%;
         text-align: center;
     }
