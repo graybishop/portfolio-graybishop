@@ -11,3 +11,12 @@ This page include a short description of me as a professional, a gallery of proj
 Link to [github-pages](https://graybishop.github.io/portfolio-graybishop/) deployment.
 
 ## Screenshot
+
+![screenshot of project](./images/portfolio-screenshot.jpg)
+
+## Tech Stack
+
+* HTML5
+* CSS3
+* Flexbox
+* Semantic Tags
