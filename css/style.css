@@ -186,11 +186,16 @@ h2{
     transform: translateY(-10px);
 }
 
+.work article a{
+    height: 100%;
+}
+
 .work article img{
     object-position: center center;
     object-fit: cover;
     /* small gap on right side of image */
     width: 101%;
+    height: 100%;
     /* https://stackoverflow.com/questions/3197601/white-space-at-bottom-of-anchor-tag */
     vertical-align: bottom;
 }
